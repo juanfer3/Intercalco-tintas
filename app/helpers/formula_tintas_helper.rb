@@ -1,0 +1,2 @@
+module FormulaTintasHelper
+end

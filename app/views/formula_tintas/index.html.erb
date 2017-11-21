@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Formula Tintas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tinta</th>
+      <th>Base tinta</th>
+      <th>Cantidad</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formula_tintas.each do |formula_tinta| %>
+      <tr>
+        <td><%= formula_tinta.tinta.pantone %></td>
+        <td><%= formula_tinta.base_tinta.descripcion_base %></td>
+        <td><%= formula_tinta.cantidad %></td>
+        <td><%= link_to 'Show', formula_tinta %></td>
+        <td><%= link_to 'Edit', edit_formula_tinta_path(formula_tinta) %></td>
+        <td><%= link_to 'Destroy', formula_tinta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Formula Tinta', new_formula_tinta_path %>

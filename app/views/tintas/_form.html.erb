@@ -1,0 +1,69 @@
+<%= simple_form_for(@tinta) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="">
+    <table>
+    <tbody>
+      <tr>
+        <td>
+          <%= f.input :codigo %>
+        </td>
+        <td>
+          <%= f.input :pantone %>
+        </td>
+        <td>
+          <%=
+            f.association :malla,
+            label_method: :num_malla,
+            value_method: :id,
+            as: :select,
+            include_blank: 'Tipo de Malla'
+
+          %>
+        </td>
+        <td>
+          <%= f.input :tipo_de_unidad %>
+        </td>
+        <td>
+          <%= f.input :cantida %>
+        </td>
+
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+  <br>
+  <div class="actions">
+    <%= link_to_add_row('<button type="button" name="button" class="btn btn-outline-info"> <span>Agregar <i class="ion-erlenmeyer-flask" style="font-size:25px;"></i>  </span></button>'.html_safe, f, :formula_tintas, class: '') %>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <th colspan="3" class="my_table_header">Formula</th>
+    </thead>
+    <tbody class="fields">
+        <%=f.simple_fields_for :formula_tintas do |builder|%>
+            <%= render 'formula_tinta', f: builder%>
+        <%end%>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td colspan="2" class="input-group">
+          <%= f.text_field :mezcla_total,class:'form-control my_cantidad',
+          id:'total',
+          placeholder:'total',
+          aria_describedby:"basic-addon2" %>
+          <span class="input-group-addon" id="basic-addon2">Total</span>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

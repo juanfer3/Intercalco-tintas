@@ -1,0 +1,22 @@
+
+<tr class="my_table_body " id="formulas">
+  <td class="">
+    <%=
+      f.association :base_tinta,
+      label_method: :descripcion_base,
+      value_method: :id,
+      as: :select,
+      class:'form-control',
+      include_blank: 'Seleccione Base '
+    %>
+  <td>
+  <div class="input-group myclass">
+    <%= f.text_field :cantidad, class:'form-control cantidad',id:'cantidad',placeholder:"Cantidad" %>
+  </div>
+
+  </td>
+  <td>
+  <%= f.input_field :_destroy, as: :hidden %>
+  <%= link_to '<button class="btn btn-outline-danger"><span class="" ><i class="ion-close-circled" font-size="130px"></i></span></button>'.html_safe, '#', class: 'remove_record' %>
+</td>
+</tr>

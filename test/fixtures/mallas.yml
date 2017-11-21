@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_malla: 1
+  caracteristica: MyText
+  estado: false
+
+two:
+  num_malla: 1
+  caracteristica: MyText
+  estado: false

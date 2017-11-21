@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  tipo_de_linea: one
+  descripcion_base: MyText
+  estado: false
+
+two:
+  codigo: MyString
+  tipo_de_linea: two
+  descripcion_base: MyText
+  estado: false

@@ -1,0 +1,2 @@
+module BaseTintasHelper
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num malla:</strong>
+  <%= @malla.num_malla %>
+</p>
+
+<p>
+  <strong>Caracteristica:</strong>
+  <%= @malla.caracteristica %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @malla.estado %>
+</p>
+
+<%= link_to 'Edit', edit_malla_path(@malla) %> |
+<%= link_to 'Back', mallas_path %>

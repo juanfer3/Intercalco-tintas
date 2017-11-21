@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tinta.codigo %>
+</p>
+
+<p>
+  <strong>Pantone:</strong>
+  <%= @tinta.pantone %>
+</p>
+
+<p>
+  <strong>Malla:</strong>
+  <%= @tinta.malla %>
+</p>
+
+<p>
+  <strong>Tipo de unidad:</strong>
+  <%= @tinta.tipo_de_unidad %>
+</p>
+
+<p>
+  <strong>Cantida:</strong>
+  <%= @tinta.cantida %>
+</p>
+
+<p>
+  <strong>Mezcla total:</strong>
+  <%= @tinta.mezcla_total %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tinta.estado %>
+</p>
+
+<%= link_to 'Edit', edit_tinta_path(@tinta) %> |
+<%= link_to 'Back', tintas_path %>

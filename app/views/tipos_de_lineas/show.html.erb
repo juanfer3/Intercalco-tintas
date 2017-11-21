@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion linea:</strong>
+  <%= @tipo_de_linea.descripcion_linea %>
+</p>
+
+<p>
+  <strong>Caracteristica:</strong>
+  <%= @tipo_de_linea.caracteristica %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tipo_de_linea.estado %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_de_linea_path(@tipo_de_linea) %> |
+<%= link_to 'Back', tipos_de_lineas_path %>

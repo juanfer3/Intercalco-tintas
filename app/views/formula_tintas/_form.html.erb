@@ -1,0 +1,14 @@
+<%= simple_form_for(@formula_tinta) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :tinta %>
+    <%= f.association :base_tinta %>
+    <%= f.input :cantidad %>
+    <%= f.input :estado %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

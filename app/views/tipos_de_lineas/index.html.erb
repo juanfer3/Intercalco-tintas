@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipos De Lineas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion linea</th>
+      <th>Caracteristica</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipos_de_lineas.each do |tipo_de_linea| %>
+      <tr>
+        <td><%= tipo_de_linea.descripcion_linea %></td>
+        <td><%= tipo_de_linea.caracteristica %></td>
+        <td><%= tipo_de_linea.estado %></td>
+        <td><%= link_to 'Show', tipo_de_linea %></td>
+        <td><%= link_to 'Edit', edit_tipo_de_linea_path(tipo_de_linea) %></td>
+        <td><%= link_to 'Destroy', tipo_de_linea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo De Linea', new_tipo_de_linea_path %>

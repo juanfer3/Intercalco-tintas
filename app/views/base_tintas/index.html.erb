@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Base Tintas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Tipo de linea</th>
+      <th>Descripcion base</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @base_tintas.each do |base_tinta| %>
+      <tr>
+        <td><%= base_tinta.codigo %></td>
+        <td><%= base_tinta.tipo_de_linea %></td>
+        <td><%= base_tinta.descripcion_base %></td>
+        <td><%= base_tinta.estado %></td>
+        <td><%= link_to 'Show', base_tinta %></td>
+        <td><%= link_to 'Edit', edit_base_tinta_path(base_tinta) %></td>
+        <td><%= link_to 'Destroy', base_tinta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Base Tinta', new_base_tinta_path %>

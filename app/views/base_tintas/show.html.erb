@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @base_tinta.codigo %>
+</p>
+
+<p>
+  <strong>Tipo de linea:</strong>
+  <%= @base_tinta.tipo_de_linea %>
+</p>
+
+<p>
+  <strong>Descripcion base:</strong>
+  <%= @base_tinta.descripcion_base %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @base_tinta.estado %>
+</p>
+
+<%= link_to 'Edit', edit_base_tinta_path(@base_tinta) %> |
+<%= link_to 'Back', base_tintas_path %>

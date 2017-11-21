@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  pantone: MyString
+  malla: one
+  tipo_de_unidad: MyString
+  cantida: 1.5
+  mezcla_total: 1.5
+  estado: false
+
+two:
+  codigo: MyString
+  pantone: MyString
+  malla: two
+  tipo_de_unidad: MyString
+  cantida: 1.5
+  mezcla_total: 1.5
+  estado: false
